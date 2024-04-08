@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>About</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <style>
+    /* Navbar styling */
+    .navbar-nav {
+      background-color: #0cf1ad;
+    }
+
+    .navbar-nav .nav-link {
+      color: #df1111 !important;
+      font-weight: bolder;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: white !important;
+    }
+
+    /* Content styling */
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    #main {
+      padding: 60px 0;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .disease-name {
+      color: #333;
+      font-weight: bold;
+    }
+
+    .disease-image {
+      width: 90%;
+      height: 90%;
+    }
+
+    .footer-top {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .footer-links a {
+      color: #fff;
+    }
+
+    .footer-links a:hover {
+      color: #ffc107;
+    }
+
+    .footer-contact {
+      color: #fff;
+    }
+
+    .breadcrumbs1 {
+      padding: 15px 0;
+      background-color: #0cf1ad;
+      min-height: 40px;
+      margin-top: -60px !important;
+    }
+
+    ul#searchResultsList li {
+  list-style: none; /* Remove default list-style */
+}
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Align content vertically */
+}
+
+.disease-image {
+  max-width: 300px;
+  max-height: 300px;
+  width: 200px; /* To maintain aspect ratio */
+  height: 200px; /* To maintain aspect ratio */
+}
+.content {
+  margin-top: 10px; /* Add margin to separate content from the image */
+  text-align: center; /* Center-align the content */
+  font-size: 16px; /* Set font size */
+  line-height: 1.5; /* Set line height for readability */
+}
+::placeholder{
+  color:green;
+  font-weight:bold;
+}
+
+  </style>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+  <script>
+    // Sample leaf disease data
+    const leafDiseases = [{
+        name: "Powdery Mildew",
+        description: "Powdery Mildew is a common fungal disease that affects mango trees. It is characterized by the presence of powdery white spots on the leaves, stems, and sometimes even on the fruit of the mango tree. This disease can weaken the tree and reduce fruit yield if not properly managed. It thrives in warm and humid conditions, making mango orchards susceptible to infection, especially during periods of high humidity. Management strategies for Powdery Mildew in mango trees typically involve cultural practices such as pruning to improve air circulation, as well as the application of fungicides to control the spread of the fungus. Additionally, selecting resistant mango varieties and maintaining proper orchard hygiene can help prevent the occurrence and spread of Powdery Mildew.",
+        image: "/static/img/Powdery Mildew.jpg"
+      },
+
+      {
+        name: "Anthracnose",
+        description: "Anthracnose is a fungal disease that commonly affects mango trees, caused by various species of Colletotrichum fungi. It manifests as dark lesions on leaves, stems, flowers, and fruits of mango trees. These lesions may appear sunken and can eventually lead to defoliation, fruit rot, and significant yield losses if left untreated. Anthracnose thrives in warm and humid conditions, particularly during periods of frequent rainfall.Management of Anthracnose in mango trees typically involves a combination of cultural, biological, and chemical control methods. Cultural practices include pruning to improve air circulation, removing and destroying infected plant material, and avoiding overhead irrigation to minimize moisture on foliage. Biological control involves the use of beneficial microorganisms or natural enemies of the Anthracnose fungus to suppress its growth.",
+        image: "/static/img/Anthracnose.jpg"
+      },
+
+      {
+        name: "Mango Healthy",
+        description: "A healthy mango leaf exhibits vibrant green coloration, smooth texture, and absence of lesions or discoloration, reflecting optimal physiological conditions and robust photosynthetic activity.Healthy mango leaves are characterized by their firmness, uniform shape, and well-defined veins, contributing to the plant's overall vigor and productivity.",
+        image: "/static/img/healthy.jpg"
+      },
+
+      {
+        name: "Sooty Mould",
+        description: "Sooty mold, caused by the presence of honeydew-excreting insects like aphids or scales, can lead to stunted growth and defoliation if left untreated. Mango farmers often employ integrated pest management strategies to control both the insect pests and the subsequent sooty mold infestation, ensuring healthier trees and higher yields.",
+        image: "/static/img/Sooty Mould.jpg"
+      },
+
+      {
+        name: "Bacterial Canker",
+        description: " Symptoms of bacterial canker on mango leaves include the appearance of small water-soaked lesions, which later turn brown or black and develop irregular margins. These lesions may coalesce, leading to large necrotic areas on the leaves. In severe cases, the infected leaves may wilt, die, and eventually drop from the tree. Additionally, bacterial ooze may be observed on the lesions, especially during periods of high humidity.",
+        image: "/static/img/Bacterial Canker.jpg"
+      },
+
+      {
+        name: "Cutting Weevil",
+        description: " Mango seed weevil (Sternochetus mangiferae) is one of the most important mango pest and is widespread in most mango-growing regions. It is also called Mango nut weevil or Mango stone weevil.Cutting weevil leaf disease is a fictional term used to describe the combined damage caused by both a leaf-cutting weevil and any associated pathogens or secondary infections on mango leaves.",
+        image: "/static/img/Cutting Weevil.jpg"
+      },
+
+      {
+        name: "Bacterial Blight",
+        description: " Rice leaf bacterial blight is a devastating disease caused by the bacterium Xanthomonas oryzae pv. oryzae (Xoo). It affects rice plants, primarily in tropical and subtropical regions, and can cause significant yield losses if not managed properly.The disease is characterized by water-soaked lesions on the leaves, which later turn brown and necrotic.These lesions can coalesce, leading to large areas of tissue damage and eventually death of the leaf. ",
+        image: "/static/img/Bacterial Blight.jpg"
+      },
+
+
+
+    ];
+
+   
+    function searchDisease() {
+  const searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
+  const searchResultsList = document.getElementById("searchResultsList");
+  const aboutSection = document.getElementById("about");
+  const diseaseImagesSection = document.getElementById("diseaseImages");
+
+  // Clear previous search results
+  searchResultsList.innerHTML = '';
+  let found = false;
+
+  leafDiseases.forEach(disease => {
+    if (disease.name.toLowerCase().includes(searchTerm) || disease.description.toLowerCase().includes(searchTerm)) {
+      const listItem = document.createElement('li');
+      
+      // Create div to contain image and content
+      const contentWrapper = document.createElement('div');
+      contentWrapper.classList.add('content-wrapper');
+      
+      // Create image element
+      const diseaseImage = document.createElement('img');
+      diseaseImage.src = disease.image; // Set image source
+      diseaseImage.alt = disease.name; // Set image alt text
+      diseaseImage.classList.add('disease-image'); // Add CSS class to image
+      diseaseImage.style.maxWidth = '200px'; // Set maximum width
+      diseaseImage.style.maxHeight = '200px'; // Set maximum height
+      contentWrapper.appendChild(diseaseImage); // Append image to content wrapper
+      
+      // Create content element
+      const content = document.createElement('div');
+      content.classList.add('content');
+      content.innerHTML = `<strong><font color="red">${disease.name}</font></strong>: ${disease.description}`; // Set content
+      contentWrapper.appendChild(content); // Append content to content wrapper
+      
+      listItem.appendChild(contentWrapper); // Append content wrapper to list item
+      searchResultsList.appendChild(listItem); // Append list item to search results list
+      
+      if (!found) {
+        found = true;
+      }
+    }
+  });
+
+  // Toggle the visibility of the "About" section based on search results
+  aboutSection.style.display = found ? 'none' : 'block';
+  // Toggle the visibility of the "Leaf Disease Images" section based on search results
+  diseaseImagesSection.style.display = found ? 'none' : 'block';
+
+  if (!found) {
+    // Hide search results if no match found
+    searchResultsList.innerHTML = '<li></li>';
+  }
+}
+
+
+
+  </script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>LEAFSCAN</span></a></h1>
+      </div>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a class="active" href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/predict">Disease Prediction</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="breadcrumbs1">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div>
+          <h2><font color="white"><b>About Leaf Diseases</b></font></h2>
+        </div>
+        <div class="d-flex">
+          <input type="text"  size="26" id="searchInput" placeholder="Search about leaf diseases...">
+          <button style="background-color: #f15f1b;" onclick="searchDisease()"><font color="white"><b>Search</b></font></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2><font color="#0cf1ad">About Leaf Diseases</font></h2><br>
+          <p>Leaf diseases are common ailments that affect various plants, including mango trees. These diseases can significantly impact plant health, reduce yield, and even lead to plant death if left untreated. Common symptoms of leaf diseases include discoloration, lesions, wilting, and abnormal growth patterns.</p>
+          <p>Early detection and proper management of leaf diseases are crucial for maintaining plant health and productivity. This involves regular monitoring of plants, implementing cultural practices to reduce disease spread, and, when necessary, using appropriate treatments such as fungicides.</p>
+          <p>By understanding the causes and symptoms of leaf diseases, farmers and gardeners can take proactive measures to protect their plants and minimize the impact of these ailments on crop yield and quality.</p>
+        </div>
+      </div>
+      <section id="diseaseImages" class="container">
+        <h2><font color="orangered">Leaf Disease Images</font></h2><br><br>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <img src="/static/img/Anthracnose.jpg" alt="Anthracnose" class="disease-image" style="width:100%; height:auto;">
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <img src="/static/img/Powdery Mildew.jpg" alt="Powdery Mildew" class="disease-image" style="width:100%; height:auto;">
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <img src="/static/img/Cutting Weevil.jpg" alt="Cutting Weevil" class="disease-image" style="width:100%; height:auto;">
+            </div>
+           
+        </div>
+    </section>
+    
+    </section>
+    
+
+    <section id="searchResults" class="container">
+      
+      <ul id="searchResultsList"></ul>
+    </section>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Our Newsletter</h4>
+            <p>The Leaf Disease Detection and Classification System aims to address the urgent need for an efficient solution to identify and categorize diseases affecting leaves.</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +91 8846775393 <br>
+              <strong>Email:</strong> leafscan@gmail.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About Leafscan</h3>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Leafscan</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with a working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
+
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="/about" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+
+</html>

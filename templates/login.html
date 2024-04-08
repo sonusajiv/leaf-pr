@@ -1,0 +1,35 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login Form </title>
+        <link rel="stylesheet" href="static/css/style1.css">
+
+       
+    </head>
+    <body>
+        <div class="container">
+            <div class="login">
+                <form method="POST" action="{{ url_for('login') }}">
+                    <h1>Login</h1>
+                    <hr>
+                    <p><font color="skyblue">Explore the World!</font></p>
+                    <label>Email</label>
+                    <input type="text" name="email" placeholder="abc@example.com">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Enter your password!">
+                    <button><b>Submit</b></button>
+                    <p>
+                      New User? <a href="/"><font color="red">Register</font></a>
+                    </p>
+                </form>
+            </div>
+            <div class="pic">
+                <img src="static/img/back1.jpg">
+            </div>
+        </div>
+        
+    </body>
+    </html>
+    </span>
+    
